@@ -404,6 +404,9 @@ int main()
 
     printf("\n\n-------------*****---PART 2 - ADDITIONAL FUNCTIONS---*****-------------\n\n");
 
+    printf("-------- TEST FT_SUBSTR FUNCTION --------\n");
+
+    printf("\n---------------------------\n\n");
 
 
     
