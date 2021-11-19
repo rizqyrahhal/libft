@@ -439,9 +439,14 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRTRIM FUNCTION --------\n");
+    printf("TEST 1 = \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "ti"));
     printf("TEST 2 = \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim(" \t\n \t    lorem ipsum dolor sit amet     \t  \n \t", "\t \n"));
+    printf("TEST 3 = \n");
+    printf("return value of ft_strtrim function === %s\n", ft_strtrim("  \n  \t  lorem  ipsum  dolor  sit  amet  \t \n ", "\t \n"));
+    printf("TEST 4 = \n");
+    printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "i t"));
     printf("\n---------------------------\n\n");
 
 
