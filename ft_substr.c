@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 22:48:51 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/19 07:15:37 by RizQy            ###   ########.fr       */
+/*   Created: 2021/11/19 06:45:29 by RizQy             #+#    #+#             */
+/*   Updated: 2021/11/19 07:14:53 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*dest;
-	const char	*srce;
-	size_t		i;
-
-	i = -1;
-	dest = (char *)dst;
-	srce = (const char *)src;
-	if (srce != '\0')
-		while (++i < n)
-			dest[i] = srce[i];
-	return (dest);
+	size_t	i;
+	size_t	j;
+	char	*str;
+	
+	i = 0;
+	j = 0;
+	str = (char *)malloc(sizeof(*str) * (len + 1));
+	if (!str)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (NULL);
+	while (s[i])
+	{
+		if (i > start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}		
+		i++;
+	}
+	str[j] = 0;
+	return (str);
 }

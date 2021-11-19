@@ -6,7 +6,7 @@
 
 int main()
 {
-    printf("\n\n-------------*****---PART 1 - LIBC FUNCTIONS---*****-------------\n\n");
+    printf("\n\n--***----------*****---PART 1 - LIBC FUNCTIONS---*****----------***--\n\n");
 
 
     printf("-------- TEST FT_IS_ALPHA FUNCTIN --------\n");
