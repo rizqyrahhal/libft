@@ -402,7 +402,7 @@ int main()
     printf("\n---------------------------\n\n");
 
 
-    printf("\n\n------------*****---PART 2 - ADDITIONAL FUNCTIONS---*****------------\n\n");
+    printf("\n\n--***----------*****---PART 2 - ADDITIONAL FUNCTIONS---*****----------***--\n\n");
 
     printf("-------- TEST FT_SUBSTR FUNCTION --------\n");
 
