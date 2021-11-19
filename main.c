@@ -389,12 +389,12 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRDUP FUNCTION --------\n");
-    printf("TEST 1 = source : strdupstrdup\n");
+    printf("TEST 1 = source : 'strdupstrdup'\n");
     char    source[] = "strdupstrdup";
     char    *target = ft_strdup(source);
     char    *target1 = strdup(source);
     printf("target use ft_strdup === %s\ntarget1 use strdup === %s\n", target, target1);
-    printf("TEST 2 = source2 : NULL\n");
+    printf("TEST 2 = source2 : 'NULL'\n");
     char    source2[] = "\0";
     char    *target0 = ft_strdup(source2);
     char    *target01 = strdup(source2);
@@ -404,9 +404,38 @@ int main()
 
     printf("\n\n--***----------*****---PART 2 - ADDITIONAL FUNCTIONS---*****----------***--\n\n");
 
-    printf("-------- TEST FT_SUBSTR FUNCTION --------\n");
 
+    printf("-------- TEST FT_SUBSTR FUNCTION --------\n");
+    printf("TEST 1 = sourc : 'substrsubstr' index : 3  len : 6\n");
+    char    sourc[] = "substrsubstr";
+    printf("return value of ft_substr function === %s\n", ft_substr(sourc, 3, 6));
+    printf("TEST 2 = sourc1 : 'sub str sub str' index : 0 len : 10\n");
+    char    sourc1[] = "sub str sub str";
+    printf("return value of ft_substr function === %s\n", ft_substr(sourc1, 0, 10));
+    printf("TEST 3 = sourc2 : 'sub str sub str' index : 17 len : 10\n");
+    char    sourc2[] = "sub str sub str";
+    printf("return value of ft_substr function === %s\n", ft_substr(sourc2, 17, 10));
     printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_STRJOIN FUNCTION --------\n");
+    printf("TEST 1 = sourcc01 : 'strstrstr'  sourcc02 : 'joinjoinjoin'  \n");
+    char    sourcc01[] = "strstrstr";
+    char    sourcc02[] = "joinjoinjoin";
+    printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc01, sourcc02));
+    printf("TEST 2 = sourcc011 : 'strstrstr'  sourcc022 : '' \n");
+    char    sourcc011[] = "strstrstr";
+    char    sourcc022[] = "";
+    printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc011, sourcc022));
+    printf("TEST 3 = sourcc0111 : '\\0'  sourcc0222 : 'joinjoinjoin'  \n");
+    char    sourcc0111[] = "\0";
+    char    sourcc0222[] = "joinjoinjoin";
+    printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc0111, sourcc0222));
+    printf("TEST 4 = sourcc01111 : '\\0'  sourcc02222 : '\\0'  \n");
+    char    sourcc01111[] = "\0";
+    char    sourcc02222[] = "\0";
+    printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc01111, sourcc02222));
+    printf("\n---------------------------\n\n");
+
 
 
     

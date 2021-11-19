@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 06:45:29 by RizQy             #+#    #+#             */
-/*   Updated: 2021/11/19 16:47:56 by rarahhal         ###   ########.fr       */
+/*   Created: 2021/11/19 16:54:45 by rarahhal          #+#    #+#             */
+/*   Updated: 2021/11/19 17:33:32 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	int		i;
+	int		j;
+	int		k;
+	char	*newstring;
 
-	i = 0;
-	j = 0;
-	str = (char *)malloc(sizeof(*str) * (len + 1));
-	if (!str)
+	i = -1;
+	j = -1;
+	k = 0;
+	newstring = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!newstring)
 		return (NULL);
-	if (start > ft_strlen(s))
-		return (NULL);
-	while (s[i])
+	while (s1[++i])
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}		
-		i++;
+		newstring[k] = s1[i];
+		k++;
 	}
-	str[j] = 0;
-	return (str);
+	while (s2[++j])
+	{
+		newstring[k] = s2[j];
+		k++;
+	}	
+	newstring[k] = 0;
+	return (newstring);
 }
