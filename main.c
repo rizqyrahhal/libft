@@ -415,6 +415,8 @@ int main()
     printf("TEST 3 = sourc2 : 'sub str sub str' index : 17 len : 10\n");
     char    sourc2[] = "sub str sub str";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc2, 17, 10));
+    printf("TEST 4 = source : 'tripouille' index : 1 len : 1\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRJOIN FUNCTION --------\n");
@@ -435,6 +437,13 @@ int main()
     char    sourcc02222[] = "\0";
     printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc01111, sourcc02222));
     printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_STRTRIM FUNCTION --------\n");
+    printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "ti"));
+    printf("TEST 2 = \n");
+    printf("return value of ft_strtrim function === %s\n", ft_strtrim(" \t\n \t    lorem ipsum dolor sit amet     \t  \n \t", "\t \n"));
+    printf("\n---------------------------\n\n");
+
 
 
 
