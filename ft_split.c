@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 13:07:33 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/20 14:01:29 by rarahhal         ###   ########.fr       */
+/*   Created: 2021/11/20 12:04:58 by rarahhal          #+#    #+#             */
+/*   Updated: 2021/11/20 14:23:12 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
-{
-	int	res;
-	int	sign;
+// char	**ft_split(char const *s, char c)
+// {
+// 	int		i;
+// 	char	**str;
 
-	res = 0;
-	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-')
-	{
-		sign *= -1;
-		str++;
-	}
-	else if (*str == '+')
-	{
-		sign *= +1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		res = res * 10 + *str - '0';
-		str++;
-	}
-	return (res * sign);
-}
+// 	i = 0;
+// 	str = (char **)malloc(sizeof(s) + 1);
+// 	if (!str)
+// 		return (NULL);
+// 	while (s[i])
+// 	{
+// 		if (s[i] != c)
+// 		{
+// 			*str[i] = (char)s[i];
+// 			i++;
+// 		}
+// 		else
+// 			str[i] = &c;
+// 		i++;
+// 	}
+// 	str[i] = 0;
+// 	return (str);
+// }

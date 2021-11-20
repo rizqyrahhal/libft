@@ -247,6 +247,9 @@ int main()
     printf("TEST 6 = s: 'bonjour' c: 'b'\n");
     printf("return valus of ft_strchr function : %s\n", ft_strchr("bonjour", 'b'));
     printf("return valus of strchr function : %s\n", strchr("bonjour", 'b'));
+    printf("TEST 7 = s: 'tripouille' c: 't' + 256\n");
+    printf("return valus of ft_strchr function : %s\n", ft_strchr("tripouille", 't' + 256));
+    printf("return valus of strchr function : %s\n", strchr("tripouille", 't' + 256));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRRCHR FUNCTION --------\n");
@@ -347,6 +350,11 @@ int main()
     printf("TEST 6 = haystack:(lorem ipsum dolor sit amet) needle:(dolor) len: 15\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf("return valus of strnstr function === %s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+    printf("TEST 7 = haystack:(empty) needle:() len: -1\n");
+    char *empty = (char *)"";
+    char *empty1 = (char *)"";
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr(empty, "", -1));
+    printf("return valus of strnstr function === %s\n", strnstr(empty1, "", -1));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ATOI FUNCTION --------\n");
@@ -448,6 +456,24 @@ int main()
     printf("TEST 4 = \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "i t"));
     printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_SPLIT FUNCTION --------\n");
+    printf("TEST 1 = \n");
+    // char *ss = "     haka-m   sd-sdsd  taw-ol    ";
+    // char **sss = ft_split(ss, '-');
+    // for (int i = 0; sss[i] != NULL; i++) {
+    //     printf("|%s|\n", sss[i]);
+    // }
+    // printf("return value of ft_split function === %s\n", ft_split("tid-ol-ardol -arti", '-'));
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_ITOA FUNCTION --------\n");
+    // printf("%s\n", ft_itoa(0));
+	// printf("%s\n", ft_itoa(987654321));
+	// printf("%s\n", ft_itoa(-123456789));
+    printf("\n---------------------------\n\n");
+
+
 
 
 

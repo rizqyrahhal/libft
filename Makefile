@@ -6,7 +6,7 @@
 #    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 00:33:04 by rarahhal          #+#    #+#              #
-#    Updated: 2021/11/19 17:50:35 by rarahhal         ###   ########.fr        #
+#    Updated: 2021/11/20 14:22:03 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ SRCS = ft_isalpha.c \
 	   ft_substr.c \
 	   ft_strjoin.c \
 	   ft_strtrim.c \
+	   ft_split.c \
+	   ft_itoa.c \
+	   ft_putchar_fd \
 	   
 	   
 	   
