@@ -473,6 +473,9 @@ int main()
 	// printf("%s\n", ft_itoa(-123456789));
     printf("\n---------------------------\n\n");
 
+    printf("-------- TEST FT_PUTCHAR_FD FUNCTION --------\n");
+    ft_putchar_fd('1', fd);
+    printf("\n---------------------------\n\n");
 
 
 
