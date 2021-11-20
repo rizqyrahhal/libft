@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h> 
+#include <errno.h> 
 
 int main()
 {
@@ -473,8 +475,69 @@ int main()
 	// printf("%s\n", ft_itoa(-123456789));
     printf("\n---------------------------\n\n");
 
+    int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
     printf("-------- TEST FT_PUTCHAR_FD FUNCTION --------\n");
+    printf("####GO TO THE FILE DESCRIPTOR####");
+    ft_putendl_fd("FT_PUTCHRA_FD FUNCTION", fd);
+    ft_putchar_fd('d', fd);
+    ft_putchar_fd('\n', fd);
+	ft_putchar_fd('@', fd);
+    ft_putchar_fd('\n', fd);
+	ft_putchar_fd('\%', fd);
+    ft_putchar_fd('\n', fd);
+	ft_putchar_fd('$', fd);
+    ft_putchar_fd('\n', fd);
+	ft_putchar_fd('\\', fd);
+    ft_putchar_fd('\n', fd);
     ft_putchar_fd('1', fd);
+    ft_putchar_fd('\n', fd);
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_PUTSTR_FD FUNCTION --------\n");
+    printf("####GO TO THE FILE DESCRIPTOR####");
+    ft_putendl_fd("FT_PUTSTR_FD FUNCTION", fd);
+	ft_putstr_fd("23456789", fd);
+    ft_putchar_fd('\n', fd);
+	ft_putstr_fd("", fd);
+    ft_putchar_fd('\n', fd);
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_PUTENDL_FD FUNCTION --------\n");
+    printf("####GO TO THE FILE DESCRIPTOR####");
+    ft_putendl_fd("FT_PUTENDL_FD FUNCTION", fd);
+	ft_putendl_fd("abcdef", fd);
+    ft_putchar_fd('\n', fd);
+	ft_putendl_fd("", fd);
+    ft_putchar_fd('\n', fd);
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_PUTNBR_FD FUNCTION --------\n");
+    printf("####GO TO THE FILE DESCRIPTOR####");
+    ft_putendl_fd("FT_PUTNBR_FD FUNCTION", fd);
+	ft_putnbr_fd(123456789, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(1, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-123456789, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-1, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(0, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-0, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd((int)2147483648, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd((int)2147483649, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd((int)-2147483648, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd((int)-2147483649, fd);
+    ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-0, fd);
+    printf("\n---------------------------\n\n");
+    close(fd);
+
     printf("\n---------------------------\n\n");
 
 
