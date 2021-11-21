@@ -461,11 +461,12 @@ int main()
 
     printf("-------- TEST FT_SPLIT FUNCTION --------\n");
     printf("TEST 1 = \n");
-    // char *ss = "     haka-m   sd-sdsd  taw-ol    ";
-    // char **sss = ft_split(ss, '-');
-    // for (int i = 0; sss[i] != NULL; i++) {
-    //     printf("|%s|\n", sss[i]);
-    // }
+    char *ss = "     he   llo     world    again    ";
+    char **sss = ft_split(ss, ' ');
+    printf("|%s|\n", sss[0]);
+    for (int i = 0; sss[i] != NULL; i++) {
+        printf("|%s|\n", sss[i]);
+    }
     // printf("return value of ft_split function === %s\n", ft_split("tid-ol-ardol -arti", '-'));
     printf("\n---------------------------\n\n");
 
@@ -538,7 +539,7 @@ int main()
     printf("\n---------------------------\n\n");
     close(fd);
 
-    printf("\n---------------------------\n\n");
+
 
 
 
