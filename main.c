@@ -461,7 +461,7 @@ int main()
 
     printf("-------- TEST FT_SPLIT FUNCTION --------\n");
     printf("TEST 1 = \n");
-    char *ss = "     he   llo     world    again    ";
+    char *ss = "hello     world    again    ";
     char **sss = ft_split(ss, ' ');
     printf("|%s|\n", sss[0]);
     for (int i = 0; sss[i] != NULL; i++) {
