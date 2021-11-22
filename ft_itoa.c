@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:53:29 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/22 14:30:38 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/22 15:36:22 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,11 @@ long	ft_nb_len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*ft_write(char *str, long nb, long len)
 {
-	long	nb;
-	long	len;
 	long	i;
-	char	*str;
 
-	nb = n;
-	len = ft_nb_len(nb);
 	i = 0;
-	str = malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
 	if (nb < 0)
 	{
 		str[0] = '-';
@@ -55,4 +47,18 @@ char	*ft_itoa(int n)
 		len--;
 	}
 	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	long	nb;
+	long	len;
+	char	*str;
+
+	nb = n;
+	len = ft_nb_len(nb);
+	str = malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (NULL);
+	return (ft_write(str, nb, len));
 }
