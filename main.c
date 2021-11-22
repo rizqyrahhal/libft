@@ -471,9 +471,10 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ITOA FUNCTION --------\n");
-    // printf("%s\n", ft_itoa(0));
-	// printf("%s\n", ft_itoa(987654321));
-	// printf("%s\n", ft_itoa(-123456789));
+    printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(987654321));
+	printf("%s\n", ft_itoa(-123456789));
+	printf("%s\n", ft_itoa(5));
     printf("\n---------------------------\n\n");
 
     int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
