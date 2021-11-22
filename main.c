@@ -353,10 +353,11 @@ int main()
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf("return valus of strnstr function === %s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf("TEST 7 = haystack:(empty) needle:() len: -1\n");
-    char *empty = (char *)"";
-    char *empty1 = (char *)"";
-    printf("return valus of ft_strnstr function === %s\n", ft_strnstr(empty, "", -1));
-    printf("return valus of strnstr function === %s\n", strnstr(empty1, "", -1));
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
+    printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
+    printf("TEST 8 = haystack:() needle:() len: -1\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "", -1));
+    printf("return valus of strnstr function === %s\n", strnstr("", "", -1));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ATOI FUNCTION --------\n");
@@ -427,6 +428,9 @@ int main()
     printf("return value of ft_substr function === %s\n", ft_substr(sourc2, 17, 10));
     printf("TEST 4 = source : 'tripouille' index : 1 len : 1\n");
     printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
+    printf("TEST 5 = source : '1 index : 42 len : 42000000\n");
+    char * str = strdup("1");
+    printf("return value of ft_substr function === %s\n", ft_substr(str, 42, 42000000));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRJOIN FUNCTION --------\n");
@@ -461,25 +465,27 @@ int main()
 
     printf("-------- TEST FT_SPLIT FUNCTION --------\n");
     printf("TEST 1 = \n");
-    char *ss = "hello     world    again    ";
+    char *ss = "   hello  world    again    ";
     char **sss = ft_split(ss, ' ');
-    printf("|%s|\n", sss[0]);
     for (int i = 0; sss[i] != NULL; i++) {
         printf("|%s|\n", sss[i]);
     }
-    // printf("return value of ft_split function === %s\n", ft_split("tid-ol-ardol -arti", '-'));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ITOA FUNCTION --------\n");
-    printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(5));
-	printf("%s\n", ft_itoa(987654321));
-	printf("%s\n", ft_itoa(-123456789));
+    printf("TEST 1 = n : 0\n");
+    printf("return value of ft_itoa function ===  %s\n", ft_itoa(0));
+    printf("TEST 2 = n : 5\n");
+    printf("return value of ft_itoa function ===  %s\n", ft_itoa(5));
+    printf("TEST 3 = n : 987654321\n");
+    printf("return value of ft_itoa function ===  %s\n", ft_itoa(987654321));
+    printf("TEST 4 = n : -123456789\n");
+	printf("return value of ft_itoa function ===  %s\n", ft_itoa(-123456789));
     printf("\n---------------------------\n\n");
 
     int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
     printf("-------- TEST FT_PUTCHAR_FD FUNCTION --------\n");
-    printf("####GO TO THE FILE DESCRIPTOR####");
+    printf("#### GO TO THE FILE DESCRIPTOR ####");
     ft_putendl_fd("FT_PUTCHRA_FD FUNCTION", fd);
     ft_putchar_fd('d', fd);
     ft_putchar_fd('\n', fd);
@@ -496,7 +502,7 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_PUTSTR_FD FUNCTION --------\n");
-    printf("####GO TO THE FILE DESCRIPTOR####");
+    printf("#### GO TO THE FILE DESCRIPTOR ####");
     ft_putendl_fd("FT_PUTSTR_FD FUNCTION", fd);
 	ft_putstr_fd("23456789", fd);
     ft_putchar_fd('\n', fd);
@@ -505,7 +511,7 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_PUTENDL_FD FUNCTION --------\n");
-    printf("####GO TO THE FILE DESCRIPTOR####");
+    printf("#### GO TO THE FILE DESCRIPTOR ####");
     ft_putendl_fd("FT_PUTENDL_FD FUNCTION", fd);
 	ft_putendl_fd("abcdef", fd);
     ft_putchar_fd('\n', fd);
@@ -514,7 +520,7 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_PUTNBR_FD FUNCTION --------\n");
-    printf("####GO TO THE FILE DESCRIPTOR####");
+    printf("#### GO TO THE FILE DESCRIPTOR ####");
     ft_putendl_fd("FT_PUTNBR_FD FUNCTION", fd);
 	ft_putnbr_fd(123456789, fd);
     ft_putchar_fd('\n', fd);
@@ -545,8 +551,6 @@ int main()
 
 
 
-
-    
     
 
 

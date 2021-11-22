@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:53:29 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/22 15:36:22 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/22 15:52:16 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ long	ft_nb_len(long nb)
 
 char	*ft_write(char *str, long nb, long len)
 {
-	long	i;
-
-	i = 0;
 	if (nb < 0)
 	{
 		str[0] = '-';
