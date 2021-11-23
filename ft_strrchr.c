@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:32:31 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/16 18:53:05 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:32:20 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	tmp = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			tmp = (char *)(s + i);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		tmp = (char *)(s + i);
 	return (tmp);
 }

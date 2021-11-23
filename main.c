@@ -6,6 +6,13 @@
 #include <fcntl.h> 
 #include <errno.h> 
 
+char mapi(unsigned int i, char c)
+{
+    char su;
+    su = c + 1;
+    return (su);
+}
+
 int main()
 {
     printf("\n\n--***----------*****---PART 1 - LIBC FUNCTIONS---*****----------***--\n\n");
@@ -431,6 +438,8 @@ int main()
     printf("TEST 5 = source : '1 index : 42 len : 42000000\n");
     char * str = strdup("1");
     printf("return value of ft_substr function === %s\n", ft_substr(str, 42, 42000000));
+    printf("TEST 4 = source : '0123456789' index : 9 len : 10\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("0123456789", 9, 10));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRJOIN FUNCTION --------\n");
@@ -465,10 +474,22 @@ int main()
 
     printf("-------- TEST FT_SPLIT FUNCTION --------\n");
     printf("TEST 1 = \n");
-    char *ss = "   hello  world    again    ";
+    char *ss = "   hello   world    again   ";
     char **sss = ft_split(ss, ' ');
     for (int i = 0; sss[i] != NULL; i++) {
         printf("|%s|\n", sss[i]);
+    }
+    printf("TEST 2 = \n");
+    char *ss1 = "--1-2--3---4----5-----42";
+    char **sss1 = ft_split(ss1, '-');
+    for (int i = 0; sss1[i] != NULL; i++) {
+        printf("|%s|\n", sss1[i]);
+    }
+    printf("TEST 3 = \n");
+    char *ss3 = "           ";
+    char **sss3 = ft_split(ss3, ' ');
+    for (int i = 0; sss3[i] != NULL; i++) {
+        printf("|%s|\n", sss3[i]);
     }
     printf("\n---------------------------\n\n");
 
@@ -481,6 +502,20 @@ int main()
     printf("return value of ft_itoa function ===  %s\n", ft_itoa(987654321));
     printf("TEST 4 = n : -123456789\n");
 	printf("return value of ft_itoa function ===  %s\n", ft_itoa(-123456789));
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_STRMAPI FUNCTION --------\n");
+    char str05[] = "abc";
+    char *str055;
+    str055 = ft_strmapi(str05, *mapi);
+    printf("%s\n", str055);
+    printf("\n---------------------------\n\n");
+
+    printf("-------- TEST FT_STRITERI FUNCTION --------\n");
+
+
+
+
     printf("\n---------------------------\n\n");
 
     int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
