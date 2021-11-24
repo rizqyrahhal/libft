@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:01:16 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/17 18:13:39 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:23:32 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// {
-// 	size_t	i;
-// 	unsigned char *p;
-
-// 	i = 0;
-// 	p = (unsigned char *)s;
-// 	while (p[i] && i <= n)
-// 	{
-// 		if (i >= n)
-// 			return (NULL);
-// 		else if (p[i] == c)
-// 			return ((char *)p + i);
-// 		i++;
-// 	}
-// 	if (p[i] == c && i <= n)
-// 		return ((char *)p + i);
-// 	return (NULL);
-// }
