@@ -418,12 +418,18 @@ int main()
     printf("\nTEST 6 = haystack:(lorem ipsum dolor sit amet) needle:(dolor) len: 15\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf("return valus of strnstr function === %s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
-    printf("\nTEST 7 = haystack:(empty) needle:() len: -1\n");
-    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
-    printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
+    printf("\nTEST 7 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:() len: -4\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "", -4));
+    printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "", -4));
     printf("\nTEST 8 = haystack:() needle:() len: -1\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "", -1));
     printf("return valus of strnstr function === %s\n", strnstr("", "", -1));
+    printf("\nTEST 9 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:(dir) len: 10\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 10));
+    printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 10));
+    printf("\nTEST 10 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:(dir) len: 2\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
+    printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ATOI FUNCTION --------\n");
