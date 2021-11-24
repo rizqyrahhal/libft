@@ -12,6 +12,17 @@ char mapi(unsigned int i, char c)
     su = c + 1;
     return (su);
 }
+// void mapi1(unsigned int i, char *c)
+// {
+//     char *su;
+
+//     while (*su)
+//     {
+//         su = c + 1;
+//         su++;
+//     }
+//     return ;
+// }
 
 int main()
 {
@@ -217,6 +228,15 @@ int main()
     strcpy(catdest1, "hakam");
     printf("=== %lu\n", strlcat(catdest1, "hello test", 3));
     printf("=== %s\n", catdest1);
+    printf("TEST 2 = \n");
+    char *catdest0 = malloc(sizeof(char) * 5);
+    strcpy(catdest0, "hakam");
+    printf("=== %lu\n", ft_strlcat(catdest0, " hello test", 12));
+    printf("=== %s\n", catdest0);
+    char *catdest01 = malloc(sizeof(char) * 5);
+    strcpy(catdest01, "hakam");
+    printf("=== %lu\n", strlcat(catdest01, " hello test", 12));
+    printf("=== %s\n", catdest01);
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_TOUPPER FUNCTION --------\n");
@@ -507,15 +527,14 @@ int main()
     printf("-------- TEST FT_STRMAPI FUNCTION --------\n");
     char str05[] = "abc";
     char *str055;
-    str055 = ft_strmapi(str05, *mapi);
+    str055 = ft_strmapi(str05, mapi);
     printf("%s\n", str055);
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRITERI FUNCTION --------\n");
-
-
-
-
+    // char st05[] = "abc";
+    // ft_striteri(st05, mapi1);
+    // printf("%s\n", st05);
     printf("\n---------------------------\n\n");
 
     int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
