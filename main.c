@@ -8,21 +8,13 @@
 
 char mapi(unsigned int i, char c)
 {
-    char su;
-    su = c + 1;
-    return (su);
+    c = c + 1;
+    return (c);
 }
-// void mapi1(unsigned int i, char *c)
-// {
-//     char *su;
-
-//     while (*su)
-//     {
-//         su = c + 1;
-//         su++;
-//     }
-//     return ;
-// }
+void mapi1(unsigned int i, char *c)
+{
+    *c = *c + 1;
+}
 
 int main()
 {
@@ -360,6 +352,11 @@ int main()
     printf("\nTEST 8 = s1:(test\\0) s2:(test\\200) n: 6\n");
     printf("return valus of ft_strncmp function === %d\n", ft_strncmp("test\0", "test\200", 6));
     printf("return valus of strncmp function === %d\n", strncmp("test\0", "test\200", 6));
+    printf("\nTEST 9 = s1:(s2[]) s2:(s3[]) n: 4\n");
+    char s2[] = {0, 0, 127, 0};
+    char s3[] = {0, 0, 42, 0};
+    printf("return valus of ft_strncmp function === %d\n", ft_strncmp(s2, s3, 4));
+    printf("return valus of strncmp function === %d\n", strncmp(s2, s3, 4));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_MEMCHR FUNCTION --------\n");
@@ -373,6 +370,9 @@ int main()
     int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
     printf("return valus of ft_memchr function === %s\n", ft_memchr(tab, -1, 7));
     printf("return valus of memchr function === %s\n", memchr(tab, -1, 7));
+    printf("\nTEST 4 = (s : bonjourno) (c : w) (n : 10)\n");
+    printf("return valus of ft_memchr function === %s\n", ft_memchr("bonjourno", 'w', 10));
+    printf("return valus of memchr function === %s\n", memchr("bonjourno", 'w', 10));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_MEMCMP FUNCTION --------\n");
@@ -391,31 +391,37 @@ int main()
     printf("\nTEST 5 = s1:() s2:(hello) n: 5\n");
     printf("return valus of ft_memcmp function === %d\n", ft_memcmp("", "hello", 5));
     printf("return valus of memcmp function === %d\n", memcmp("", "hello", 5));
+    printf("\nTEST 6 = s1:(test\\0) s2:(test\\200) n: 6\n");
+    printf("return valus of ft_memcmp function === %d\n", ft_memcmp("test\0", "test\200", 6));
+    printf("return valus of memcmp function === %d\n", memcmp("test\0", "test\200", 6));
+    printf("\nTEST 7 = s1:(test\\200) s2:(test\\0) n: 6\n");
+    printf("return valus of ft_memcmp function === %d\n", ft_memcmp("test\200", "test\0", 6));
+    printf("return valus of memcmp function === %d\n", memcmp("test\200", "test\0", 6));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRNSTR FUNCTION --------\n");
-    printf("TEST 1 = haystack:(hello) needle:() len: 5\n");
+    printf("\nTEST 1 = haystack:(hello) needle:() len: 5\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("hello", "", 5));
     printf("return valus of strnstr function === %s\n", strnstr("hello", "", 5));
-    printf("TEST 2 = haystack:() needle:(he) len: 5\n");
+    printf("\nTEST 2 = haystack:() needle:(he) len: 5\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "he", 5));
     printf("return valus of strnstr function === %s\n", strnstr("", "he", 5));
-    printf("TEST 3 = haystack:(hello) needle:(el) len: 5\n");
+    printf("\nTEST 3 = haystack:(hello) needle:(el) len: 5\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("hello", "el", 5));
     printf("return valus of strnstr function === %s\n", strnstr("hello", "el", 5));
-    printf("TEST 4 = haystack:(hello) needle:(el) len: 0\n");
+    printf("\nTEST 4 = haystack:(hello) needle:(el) len: 0\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("hello", "el", 0));
     printf("return valus of strnstr function === %s\n", strnstr("hello", "el", 0));
-    printf("TEST 5 = haystack:(lorem ipsum dolor sit amet) needle:(ipsumm) len: 30\n");
+    printf("\nTEST 5 = haystack:(lorem ipsum dolor sit amet) needle:(ipsumm) len: 30\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
     printf("return valus of strnstr function === %s\n", strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
-    printf("TEST 6 = haystack:(lorem ipsum dolor sit amet) needle:(dolor) len: 15\n");
+    printf("\nTEST 6 = haystack:(lorem ipsum dolor sit amet) needle:(dolor) len: 15\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf("return valus of strnstr function === %s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
-    printf("TEST 7 = haystack:(empty) needle:() len: -1\n");
+    printf("\nTEST 7 = haystack:(empty) needle:() len: -1\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
     printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", -4));
-    printf("TEST 8 = haystack:() needle:() len: -1\n");
+    printf("\nTEST 8 = haystack:() needle:() len: -1\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "", -1));
     printf("return valus of strnstr function === %s\n", strnstr("", "", -1));
     printf("\n---------------------------\n\n");
@@ -565,9 +571,9 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRITERI FUNCTION --------\n");
-    // char st05[] = "abc";
-    // ft_striteri(st05, mapi1);
-    // printf("%s\n", st05);
+    char st05[] = "abc";
+    ft_striteri(st05, &mapi1);
+    printf("%s\n", st05);
     printf("\n---------------------------\n\n");
 
     int fd = open("fd.txt", O_WRONLY | O_CREAT, 0777);
