@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:55:49 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/18 21:06:34 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:50:47 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (n && s1[i] && s1[i] == s2[i])
 	{
 		i++;
-		--n;
+		n--;
 	}
+	if (s1[i] == '\0' && s2[i] == '\200')
+		return (-1);
 	if (s1[i] == '\200' && s2[i] == '\0')
 		return (1);
 	else if (n == 0)

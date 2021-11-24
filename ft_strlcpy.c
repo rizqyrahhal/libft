@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:29:04 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/15 20:23:25 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:45:48 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dist, const char *src, size_t dstsize)
 	if (dstsize > 0)
 	{
 		while (src[i] && i < (dstsize - 1))
-		{	
+		{
 			dist[i] = src[i];
 			i++;
 		}
