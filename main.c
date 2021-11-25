@@ -433,51 +433,51 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ATOI FUNCTION --------\n");
-    printf("TEST 1 = str : ""      			-123544ab567""\n");
+    printf("\nTEST 1 = str : ""      			-123544ab567""\n");
     printf("ft_atio return value === %d\n", ft_atoi("      			-123544ab567"));
 	printf("atio return value === %d\n", atoi("      			-123544ab567"));
-	printf("TEST 2 = str : ""0""\n");
+	printf("\nTEST 2 = str : ""0""\n");
     printf("ft_atio return value === %d\n", ft_atoi("0"));
 	printf("atio return value === %d\n", atoi("0"));
-	printf("TEST 3 = str : ""		    ++++----11244hjsdgjhgsd""\n");
+	printf("\nTEST 3 = str : ""		    ++++----11244hjsdgjhgsd""\n");
     printf("ft_atio return value === %d\n", ft_atoi("		    ++++----11244hjsdgjhgsd"));
 	printf("atio return value === %d\n", atoi("		    ++++----11244hjsdgjhgsd"));
-	printf("TEST 4 = str : ""    		1457vsfdjc""\n");
+	printf("\nTEST 4 = str : ""    		1457vsfdjc""\n");
     printf("ft_atio return value === %d\n", ft_atoi("    		1457vsfdjc"));
 	printf("atio return value === %d\n", atoi("    		1457vsfdjc"));
-	printf("TEST 5 = str : ""  		a5464565djhdf""\n");
+	printf("\nTEST 5 = str : ""  		a5464565djhdf""\n");
     printf("ft_atio return value === %d\n", ft_atoi("  		a5464565djhdf"));
 	printf("atio return value === %d\n", atoi("  		a5464565djhdf"));
-	printf("TEST 6 = str : ""546:5""\n");
+	printf("\nTEST 6 = str : ""546:5""\n");
     printf("ft_atio return value === %d\n", ft_atoi("546:5"));
 	printf("atio return value === %d\n", atoi("546:5"));
-	printf("TEST 7 = str : ""+548""\n");
+	printf("\nTEST 7 = str : ""+548""\n");
     printf("ft_atio return value === %d\n", ft_atoi("+548"));
 	printf("atio return value === %d\n", atoi("+548"));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_CALLOC FUNCTION --------\n");
-    printf("TEST 1 = pstr && ptstr : aaaaaa\n");
+    printf("\nTEST 1 = pstr && ptstr : aaaaaa\n");
     char *ptstr = "aaaaaa";
     printf("pstr countene : %s\n", ptstr);
-    ptstr = (char *)ft_calloc(6, 100);
+    ptstr = ft_calloc(6, 100);
     printf("pstr countene after use ft_calloc function: %s\n", ptstr);
     char *pstr = "aaaaaa";
     printf("pstr countene : %s\n", pstr);
-    pstr = (char *)calloc(6, 100);
+    pstr = calloc(6, 100);
     printf("pstr countene after use calloc function: %s\n", pstr);
-    printf("TEST 2 = !str \n");
+    printf("\nTEST 2 = !str \n");
     printf("return value of ft_calloc function : %s\n", (char *)ft_calloc(5, 20));
     printf("return value of calloc function : %s\n", (char *)calloc(5, 20));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRDUP FUNCTION --------\n");
-    printf("TEST 1 = source : 'strdupstrdup'\n");
+    printf("\nTEST 1 = source : 'strdupstrdup'\n");
     char    source[] = "strdupstrdup";
     char    *target = ft_strdup(source);
     char    *target1 = strdup(source);
     printf("target use ft_strdup === %s\ntarget1 use strdup === %s\n", target, target1);
-    printf("TEST 2 = source2 : 'NULL'\n");
+    printf("\nTEST 2 = source2 : 'NULL'\n");
     char    source2[] = "\0";
     char    *target0 = ft_strdup(source2);
     char    *target01 = strdup(source2);
@@ -489,21 +489,21 @@ int main()
 
 
     printf("-------- TEST FT_SUBSTR FUNCTION --------\n");
-    printf("TEST 1 = sourc : 'substrsubstr' index : 3  len : 6\n");
+    printf("\nTEST 1 = sourc : 'substrsubstr' index : 3  len : 6\n");
     char    sourc[] = "substrsubstr";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc, 3, 6));
-    printf("TEST 2 = sourc1 : 'sub str sub str' index : 0 len : 10\n");
+    printf("\nTEST 2 = sourc1 : 'sub str sub str' index : 0 len : 10\n");
     char    sourc1[] = "sub str sub str";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc1, 0, 10));
-    printf("TEST 3 = sourc2 : 'sub str sub str' index : 17 len : 10\n");
+    printf("\nTEST 3 = sourc2 : 'sub str sub str' index : 17 len : 10\n");
     char    sourc2[] = "sub str sub str";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc2, 17, 10));
-    printf("TEST 4 = source : 'tripouille' index : 1 len : 1\n");
+    printf("\nTEST 4 = source : 'tripouille' index : 1 len : 1\n");
     printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
-    printf("TEST 5 = source : '1 index : 42 len : 42000000\n");
+    printf("\nTEST 5 = source : '1 index : 42 len : 42000000\n");
     char * str = strdup("1");
     printf("return value of ft_substr function === %s\n", ft_substr(str, 42, 42000000));
-    printf("TEST 4 = source : '0123456789' index : 9 len : 10\n");
+    printf("\nTEST 4 = source : '0123456789' index : 9 len : 10\n");
     printf("return value of ft_substr function === %s\n", ft_substr("0123456789", 9, 10));
     printf("\n---------------------------\n\n");
 
@@ -644,7 +644,6 @@ int main()
 	ft_putnbr_fd(-0, fd);
     printf("\n---------------------------\n\n");
     close(fd);
-
 
 
 
