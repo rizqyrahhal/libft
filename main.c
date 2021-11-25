@@ -503,54 +503,63 @@ int main()
     printf("\nTEST 5 = source : '1 index : 42 len : 42000000\n");
     char * str = strdup("1");
     printf("return value of ft_substr function === %s\n", ft_substr(str, 42, 42000000));
-    printf("\nTEST 4 = source : '0123456789' index : 9 len : 10\n");
+    printf("\nTEST 6 = source : '0123456789' index : 9 len : 10\n");
     printf("return value of ft_substr function === %s\n", ft_substr("0123456789", 9, 10));
+    printf("\nTEST 7 = source : 'tripouille' index : 1 len : 1\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
+    printf("\nTEST 8 = source : '42' index : 0 len : 0\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("42", 0, 0));
+    printf("\nTEST 9 = source : 'BONJOUR LES HARICOTS !' index : 8 len : 14\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("BONJOUR LES HARICOTS !", 8, 14));
+    printf("\nTEST 10 = source : 'test' index : 1 len : 2\n");
+    printf("return value of ft_substr function === %s\n", ft_substr("test", 1, 2));
+
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRJOIN FUNCTION --------\n");
-    printf("TEST 1 = sourcc01 : 'strstrstr'  sourcc02 : 'joinjoinjoin'  \n");
+    printf("\nTEST 1 = sourcc01 : 'strstrstr'  sourcc02 : 'joinjoinjoin'  \n");
     char    sourcc01[] = "strstrstr";
     char    sourcc02[] = "joinjoinjoin";
     printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc01, sourcc02));
-    printf("TEST 2 = sourcc011 : 'strstrstr'  sourcc022 : '' \n");
+    printf("\nTEST 2 = sourcc011 : 'strstrstr'  sourcc022 : '' \n");
     char    sourcc011[] = "strstrstr";
     char    sourcc022[] = "";
     printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc011, sourcc022));
-    printf("TEST 3 = sourcc0111 : '\\0'  sourcc0222 : 'joinjoinjoin'  \n");
+    printf("\nTEST 3 = sourcc0111 : '\\0'  sourcc0222 : 'joinjoinjoin'  \n");
     char    sourcc0111[] = "\0";
     char    sourcc0222[] = "joinjoinjoin";
     printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc0111, sourcc0222));
-    printf("TEST 4 = sourcc01111 : '\\0'  sourcc02222 : '\\0'  \n");
+    printf("\nTEST 4 = sourcc01111 : '\\0'  sourcc02222 : '\\0'  \n");
     char    sourcc01111[] = "\0";
     char    sourcc02222[] = "\0";
     printf("return value of ft_strjoin function === %s\n", ft_strjoin(sourcc01111, sourcc02222));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_STRTRIM FUNCTION --------\n");
-    printf("TEST 1 = \n");
+    printf("\nTEST 1 = (s1 : 'tidolardolarti') (set : 'ti') \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "ti"));
-    printf("TEST 2 = \n");
+    printf("\nTEST 2 = (s1 : ' \\t\\n \\t    lorem ipsum dolor sit amet     \\t  \\n \\t') (set : '\\t \\n') \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim(" \t\n \t    lorem ipsum dolor sit amet     \t  \n \t", "\t \n"));
-    printf("TEST 3 = \n");
+    printf("\nTEST 3 = (s1 : '  \\n  \\t  lorem  ipsum  dolor  sit  amet  \\t \\n ') (set : '\\t \\n') \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim("  \n  \t  lorem  ipsum  dolor  sit  amet  \t \n ", "\t \n"));
-    printf("TEST 4 = \n");
+    printf("\nTEST 4 = (s1 : 'tidolardolarti') (set : 'i t') \n");
     printf("return value of ft_strtrim function === %s\n", ft_strtrim("tidolardolarti", "i t"));
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_SPLIT FUNCTION --------\n");
-    printf("TEST 1 = \n");
+    printf("\nTEST 1 = (s : '   hello   world    again   ') (c : ' ')\n");
     char *ss = "   hello   world    again   ";
     char **sss = ft_split(ss, ' ');
     for (int i = 0; sss[i] != NULL; i++) {
         printf("|%s|\n", sss[i]);
     }
-    printf("TEST 2 = \n");
+    printf("\nTEST 2 = (s : '--1-2--3---4----5-----42') (c : '-')\n");
     char *ss1 = "--1-2--3---4----5-----42";
     char **sss1 = ft_split(ss1, '-');
     for (int i = 0; sss1[i] != NULL; i++) {
         printf("|%s|\n", sss1[i]);
     }
-    printf("TEST 3 = \n");
+    printf("\nTEST 3 = (s : '           ') (c : ' ')\n");
     char *ss3 = "           ";
     char **sss3 = ft_split(ss3, ' ');
     for (int i = 0; sss3[i] != NULL; i++) {
@@ -559,13 +568,13 @@ int main()
     printf("\n---------------------------\n\n");
 
     printf("-------- TEST FT_ITOA FUNCTION --------\n");
-    printf("TEST 1 = n : 0\n");
+    printf("\nTEST 1 = n : 0\n");
     printf("return value of ft_itoa function ===  %s\n", ft_itoa(0));
-    printf("TEST 2 = n : 5\n");
+    printf("\nTEST 2 = n : 5\n");
     printf("return value of ft_itoa function ===  %s\n", ft_itoa(5));
-    printf("TEST 3 = n : 987654321\n");
+    printf("\nTEST 3 = n : 987654321\n");
     printf("return value of ft_itoa function ===  %s\n", ft_itoa(987654321));
-    printf("TEST 4 = n : -123456789\n");
+    printf("\nTEST 4 = n : -123456789\n");
 	printf("return value of ft_itoa function ===  %s\n", ft_itoa(-123456789));
     printf("\n---------------------------\n\n");
 

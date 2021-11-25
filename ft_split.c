@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 12:04:58 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/22 19:07:21 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:38:21 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,47 +55,3 @@ char	**ft_split(char const *s, char c)
 	arr[i] = 0;
 	return (arr);
 }
-
-// int	ft_len_str(char *str, char c, int i)
-// {
-// 	int	len;
-
-// 	len = 0;
-// 	while (str[i] == c)
-// 		i++;
-// 	while (str[i] && str[i] != c)
-// 	{
-// 		i++;
-// 		len++;
-// 	}
-// 	return (len);
-// }
-
-// char		**ft_strsplit(char const *s, char c)
-// {
-// 	size_t	start;
-// 	size_t	end;
-// 	size_t	i;
-// 	size_t	nb_words;
-// 	char	**tab;
-
-// 	nb_words = 0;
-// 	tab = NULL;
-// 	i = 0;
-// 	if (s && ((tab = (char **)malloc(sizeof(*tab) * (ft_strlen(s) / 2 + 2)))))
-// 	{
-// 		while (i < ft_strlen(s))
-// 		{
-// 			while (s[i] == c && s[i])
-// 				i++;
-// 			start = i;
-// 			while (s[i] != c && s[i])
-// 				i++;
-// 			end = i;
-// 			if ((end - start) > 0)
-// 				tab[nb_words++] = ft_strsub(s, start, end - start);
-// 		}
-// 		tab[nb_words] = 0;
-// 	}
-// 	return (tab);
-// }

@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:54:45 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/19 17:33:32 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:10:42 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 	int		k;
+	int		lentgh;
 	char	*newstring;
 
 	i = -1;
 	j = -1;
 	k = 0;
-	newstring = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	lentgh = ft_strlen(s1) + ft_strlen(s2);
+	newstring = (char *)malloc(sizeof(char) * (lentgh + 1));
 	if (!newstring)
 		return (NULL);
 	while (s1[++i])
