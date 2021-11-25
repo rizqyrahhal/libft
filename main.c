@@ -11,7 +11,7 @@ char mapi(unsigned int i, char c)
     c = c + 1;
     return (c);
 }
-void mapi1(unsigned int i, char *c)
+void iteri(unsigned int i, char *c)
 {
     *c = *c + 1;
 }
@@ -587,7 +587,7 @@ int main()
 
     printf("-------- TEST FT_STRITERI FUNCTION --------\n");
     char st05[] = "abc";
-    ft_striteri(st05, &mapi1);
+    ft_striteri(st05, &iteri);
     printf("%s\n", st05);
     printf("\n---------------------------\n\n");
 
@@ -612,6 +612,8 @@ int main()
     printf("-------- TEST FT_PUTSTR_FD FUNCTION --------\n");
     printf("#### GO TO THE FILE DESCRIPTOR ####");
     ft_putendl_fd("FT_PUTSTR_FD FUNCTION", fd);
+    ft_putstr_fd("hello world !\n", fd);
+    ft_putchar_fd('\n', fd);
 	ft_putstr_fd("23456789", fd);
     ft_putchar_fd('\n', fd);
 	ft_putstr_fd("", fd);
