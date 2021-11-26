@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:05:50 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/16 13:44:18 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/26 11:59:44 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			dst[--i] = '\0';
 		else
 			dst[i] = '\0';
-		dst = 0;
 		return (dst_len + src_len);
 	}
 }

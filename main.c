@@ -175,11 +175,11 @@ int main()
     printf("\nTEST 1 = (src: ab) (dst: ) (len : 5)\n");
     char    src01[] = "ab";
     char    dst01[30];
-    ft_memmove(dst01, src01, 5);
+    ft_memmove(NULL, NULL, 5);
     printf("ft_memmove: %s\n", dst01);
     char    src011[] = "ab";
     char    dst011[30];
-    memmove(dst011, src011, 5);
+    memmove(NULL, NULL, 5);
     printf("memmove: %s\n", dst011);
     printf("\nTEST 2 = (src: sjfhrfhslfj) (dst:jjjjjjjjjjjjjj) (len : 0)\n");
     char    src02[] = "sjfhrfhslfj";
@@ -421,15 +421,24 @@ int main()
     printf("\nTEST 7 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:() len: -4\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "", -4));
     printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "", -4));
-    printf("\nTEST 8 = haystack:() needle:() len: -1\n");
-    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "", -1));
-    printf("return valus of strnstr function === %s\n", strnstr("", "", -1));
+    printf("\nTEST 8 = haystack:() needle:() len: 3\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("", "", 3));
+    printf("return valus of strnstr function === %s\n", strnstr("", "", 3));
     printf("\nTEST 9 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:(dir) len: 10\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 10));
     printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 10));
     printf("\nTEST 10 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:(dir) len: 2\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
     printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
+    // printf("\nTEST 8 = haystack:(NULL) needle:(NULL) len: 5\n");
+    // printf("return valus of ft_strnstr function === %s\n", ft_strnstr(NULL, NULL, 5));
+    // printf("return valus of strnstr function === %s\n", strnstr(NULL, NULL, 5));
+    // printf("\nTEST 9 = haystack:('teststrnstr') needle:(NULL) len: 5\n");
+    // printf("return valus of ft_strnstr function === %s\n", ft_strnstr("teststrnstr", NULL, 5));
+    // printf("return valus of strnstr function === %s\n", strnstr("teststrnstr", NULL, 5));
+    // printf("\nTEST 10 = haystack:(NULL) needle:('ser') len: 5\n");
+    // printf("return valus of ft_strnstr function === %s\n", ft_strnstr(NULL, "ser", 5));
+    // printf("return valus of strnstr function === %s\n", strnstr(NULL, "ser", 5));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_ATOI FUNCTION --------+**\n");
@@ -571,6 +580,11 @@ int main()
     for (int i = 0; sss45[i] != NULL; i++) {
         printf("|%s|\n", sss45[i]);
     }
+    printf("\nTEST 5 = (s : '  fir for far    inds  ') (c : ' ')\n");
+    int i = -1;
+    char **test = ft_split("  fir for far    inds  ", ' ');
+    while (test[++i] != NULL)
+        printf("return value of ft_split : |%s|\n", test[i]);
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_ITOA FUNCTION --------+**\n");
@@ -667,9 +681,12 @@ int main()
 
 
     
-
-
-
+/*
+    // char str78524[] = "foo-bar";
+    // memcpy(&str[2],&str[3],4);
+    // // memmove(&str[2],&str[3],4);
+    // printf("%s\n", str);
+*/
 
 
     return 0;
