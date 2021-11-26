@@ -169,6 +169,9 @@ int main()
     char    dst44[30] ="jjjjjjjjjjjjjj";
     memcpy(dst44, src44, 6);
     printf("memcpy: %s\n", dst44);
+    printf("\nTEST 5 = (src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
+    char str785243[] = "abcdefghljk";
+    printf("%s\n", ft_memcpy(&str785243[2],&str785243[0],9));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_MEMMOVE FUNCTION --------+**\n");
@@ -208,6 +211,9 @@ int main()
     char    dst044[30] ="jjjjjjjjjjjjjj";
     memmove(dst044, src044, 6);
     printf("memmove: %s\n", dst044);
+    printf("\nTEST 5 = (src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
+    char str78524[] = "abcdefghljk";
+    printf("%s\n", ft_memmove(&str78524[2],&str78524[0],9));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_STRLCPY FUNCTION --------+**\n");
@@ -346,17 +352,20 @@ int main()
     printf("\nTEST 6 = s1:(zyxbcdefgh) s2:(abcdwxyz) n: 0\n");
     printf("return valus of ft_strncmp function === %d\n", ft_strncmp("zyxbcdefgh", "abcdwxyz", 0));
     printf("return valus of strncmp function === %d\n", strncmp("zyxbcdefgh", "abcdwxyz", 0));
-    printf("\nTEST 7 = s1:(abcdefgh) s2:(abcdwxyz) n: 4\n");
-    printf("return valus of ft_strncmp function === %d\n", ft_strncmp("abcdefgh", "abcdwxyz", 4));
-    printf("return valus of strncmp function === %d\n", strncmp("abcdefgh", "abcdwxyz", 4));
-    printf("\nTEST 8 = s1:(test\\0) s2:(test\\200) n: 6\n");
-    printf("return valus of ft_strncmp function === %d\n", ft_strncmp("test\0", "test\200", 6));
-    printf("return valus of strncmp function === %d\n", strncmp("test\0", "test\200", 6));
+    printf("\nTEST 7 = s1:(abc\\0defgh) s2:(abc\\0dwxyz) n: 4\n");
+    printf("return valus of ft_strncmp function === %d\n", ft_strncmp("abc\0defgh", "abc\0dwxyz", 4));
+    printf("return valus of strncmp function === %d\n", strncmp("abc\0defgh", "abc\0dwxyz", 4));
+    printf("\nTEST 8 = s1:(test) s2:(test\\0) n: 6\n");
+    printf("return valus of ft_strncmp function === %d\n", ft_strncmp("test", "test\0", 6));
+    printf("return valus of strncmp function === %d\n", strncmp("test", "test\0", 6));
     printf("\nTEST 9 = s1:(s2[]) s2:(s3[]) n: 4\n");
     char s2[] = {0, 0, 127, 0};
     char s3[] = {0, 0, 42, 0};
     printf("return valus of ft_strncmp function === %d\n", ft_strncmp(s2, s3, 4));
     printf("return valus of strncmp function === %d\n", strncmp(s2, s3, 4));
+    printf("\nTEST 10 = s1:(t\\0est) s2:(test) n: 5\n");
+    printf("return valus of ft_strncmp function === %d\n", ft_strncmp("t\0est", "t\200est", 5));
+    printf("return valus of strncmp function === %d\n", strncmp("t\0est", "t\200est", 5));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_MEMCHR FUNCTION --------+**\n");
@@ -397,6 +406,9 @@ int main()
     printf("\nTEST 7 = s1:(test\\200) s2:(test\\0) n: 6\n");
     printf("return valus of ft_memcmp function === %d\n", ft_memcmp("test\200", "test\0", 6));
     printf("return valus of memcmp function === %d\n", memcmp("test\200", "test\0", 6));
+    printf("\nTEST 8 = s1:(test) s2:(test\\0) n: 5\n");
+    printf("return valus of ft_memcmp function === %d\n", ft_memcmp("test", "test\0", 5));
+    printf("return valus of memcmp function === %d\n", memcmp("test", "test\0", 5));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_STRNSTR FUNCTION --------+**\n");
@@ -679,14 +691,10 @@ int main()
 
 
 
-
-    
-/*
-    // char str78524[] = "foo-bar";
-    // memcpy(&str[2],&str[3],4);
-    // // memmove(&str[2],&str[3],4);
-    // printf("%s\n", str);
-*/
+// lhala li kysigmontiw fiha had joj fontiowat dyali 
+    // printf("%s\n", ft_memcpy("abcd", "abcd",4));
+    // printf("%s\n", ft_memmove("abcd", "abcd",4));
+// **************************************************
 
 
     return 0;

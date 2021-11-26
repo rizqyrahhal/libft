@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 20:45:32 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/14 18:49:54 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:04:29 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@ void	ft_bzero(void	*s, size_t	n)
 
 	if (n != 0)
 	{
-		i = -1;
+		i = 0;
 		str = s;
-		while (++i < n)
+		while (i < n)
+		{
 			str[i] = 0;
+			i++;
+		}
 	}
 	return ;
 }
