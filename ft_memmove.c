@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 21:41:10 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/27 17:52:55 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/28 00:03:04 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*srce;
 	int			i;
 
-	dest = dst;
-	srce = src;
+	dest = (char *)dst;
+	srce = (const char *)src;
 	if (!dest || !srce)
 		return (NULL);
 	if (dest == srce)

@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:21:28 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/27 22:28:18 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/27 23:18:17 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t count, size_t size)
 	p = malloc(count * size);
 	if (!p)
 		return (NULL);
-	ft_bzero(p, count * size);
+	ft_bzero(p, count);
 	return (p);
 }

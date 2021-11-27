@@ -100,6 +100,10 @@ int main()
     ft_memset(array0101, '\0', 5);
     memset(array0202, '\0', 5);
     printf("ft_memset: %s\nmemset: %s\n", array0101, array0202);
+    printf("============ NEW TEST ============= HAKAM\n");
+    int arrayint[2] = {1000, 0};
+    memset(arrayint, 'A', 4);
+    printf("RESULT == %d\n", arrayint[0]);
     /*printf("TEST 2 = nothing\n");
     char array03[] = "testmemsetfunction";
     char array04[] = "testmemsetfunction";
@@ -717,6 +721,10 @@ int main()
     printf("\n##############################################################\n\n");
 
 
+	int *ttest;
+    ttest  = ft_calloc(5,sizeof(int));
+
+	printf("%d\n",ttest[5]);
 
     return 0;
 }
