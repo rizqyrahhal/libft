@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:14:24 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/27 15:30:39 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:36:24 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **     ista3malt 'comparision' liya7tafida b9imat l2ikhtilaf 
 **     fi 7alat ida lam tatasawa ljomlatayn idan ida sadaft \0 fi 
 **     ljomlatayn flan yta2atara istimrar lkod li2ana ljomlatayn 
-**     motasawiyatayn 
+**     motasawiyatayn >
 */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

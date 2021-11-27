@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 06:45:29 by RizQy             #+#    #+#             */
-/*   Updated: 2021/11/25 14:52:32 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:23:00 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	j = 0;
 	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (!str || !s)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (NULL);
