@@ -6,14 +6,14 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:14:24 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/26 19:36:14 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:30:39 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** " memcmp function t9arin bayna ktal adakira wabitali fhiya  
+** " memcmp function to9arin bayna ktal adakira wabitali fhiya  
 **   tchtaghil 7ata fi 7alat ida ma sadafat \0 "
 **  
 **  < liyata7a9a9a l2ikhtilaf byna strncmp() wa memcmp() 
@@ -27,8 +27,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
-	size_t			comparisin;
-	size_t			i;
+	int				comparisin;
+	int				i;
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
@@ -48,3 +48,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (comparisin);
 }
+
+/*
+**printf(" La différence entre STRNCMP () et MEMCMP ()");
+**printf("\nTEST 1 : s1:(aa[]) s2:(bb[]) n: 10\n");
+**char aa[10] = {'E','n','g','l','i','s','h',0,'A'};
+**char bb[10] = {'E','n','g','l','i','s','h',0,'B'};
+**printf("return valus of ft_strncmp function === %d\n", ft_strncmp(aa, bb, 10));
+**printf("return valus of strncmp function === %d\n", strncmp(aa, bb, 10));
+**printf("return valus of ft_memcmp function === %d\n", ft_memcmp(aa, bb, 10));
+**printf("return valus of memcmp function === %d\n", memcmp(aa, bb, 10));
+*/

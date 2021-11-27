@@ -171,18 +171,20 @@ int main()
     printf("memcpy: %s\n", dst44);
     printf("\nTEST 5 = (src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
     char str785243[] = "abcdefghljk";
-    printf("%s\n", ft_memcpy(&str785243[2],&str785243[0],9));
+    printf("ft_memcpy: %s\n", ft_memcpy(&str785243[2],&str785243[0],9));
+    printf("\nTEST 6 = (src: '') (dst: '') (len : 5)\n");
+    printf("ft_memcpy: %s\n", ft_memcpy("", "", 5));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_MEMMOVE FUNCTION --------+**\n");
     printf("\nTEST 1 = (src: ab) (dst: ) (len : 5)\n");
     char    src01[] = "ab";
     char    dst01[30];
-    ft_memmove(NULL, NULL, 5);
+    ft_memmove(dst01, src01, 5);
     printf("ft_memmove: %s\n", dst01);
     char    src011[] = "ab";
     char    dst011[30];
-    memmove(NULL, NULL, 5);
+    memmove(dst011, src011, 5);
     printf("memmove: %s\n", dst011);
     printf("\nTEST 2 = (src: sjfhrfhslfj) (dst:jjjjjjjjjjjjjj) (len : 0)\n");
     char    src02[] = "sjfhrfhslfj";
@@ -213,7 +215,9 @@ int main()
     printf("memmove: %s\n", dst044);
     printf("\nTEST 5 = (src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
     char str78524[] = "abcdefghljk";
-    printf("%s\n", ft_memmove(&str78524[2],&str78524[0],9));
+    printf("ft_memmove: %s\n", ft_memmove(&str78524[2],&str78524[0],9));
+    printf("\nTEST 6 = (src: '') (dst: '') (len : 5)\n");
+    printf("ft_memmove: %s\n", ft_memmove("", "", 5));
     printf("\n|*|---------------------------|*|\n\n");
 
     printf("**+-------- TEST FT_STRLCPY FUNCTION --------+**\n");
@@ -688,13 +692,31 @@ int main()
     printf("\n|*|---------------------------|*|\n\n");
     close(fd);
 
+    printf("\n##############################################################\n\n");
+    printf("\n  La différence entre MEMMOVE() et MEMCPY() :\n");
+    printf("\nTEST MEMMOVE()<>str7852435[] = 'abcdefghljk'<>(src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
+    printf("str785245[] = 'abcdefghljk'\n");
+    char str785245[] = "abcdefghljk";
+    printf("%s\n", ft_memmove(&str785245[2],&str785245[0],9));
+    printf("\nTEST MEMCPY() = (src: '&str78524[0]') (dst: '&str78524[2]') (len : 9)\n");
+    printf("str7852435[] = 'abcdefghljk'\n");
+    char str7852435[] = "abcdefghljk";
+    printf("%s\n", ft_memcpy(&str7852435[2],&str7852435[0],9));
+
+    printf("\n---------------------------\n");
+
+    printf("\n  La différence entre STRNCMP () et MEMCMP () :\n");
+    printf("\nTEST 1 : s1:(aa[]) s2:(bb[]) n: 10\n");
+    printf("aa[] = {'E','n','g','l','i','s','h',0,'A'}\nbb[] = {'E','n','g','l','i','s','h',0,'B'}\n");
+    char aa[10] = {'E','n','g','l','i','s','h',0,'A'};
+    char bb[10] = {'E','n','g','l','i','s','h',0,'B'};
+    printf("return valus of ft_strncmp function === %d\n", ft_strncmp(aa, bb, 10));
+    printf("return valus of strncmp function === %d\n", strncmp(aa, bb, 10));
+    printf("return valus of ft_memcmp function === %d\n", ft_memcmp(aa, bb, 10));
+    printf("return valus of memcmp function === %d\n", memcmp(aa, bb, 10));
+    printf("\n##############################################################\n\n");
 
 
-
-// lhala li kysigmontiw fiha had joj fontiowat dyali 
-    // printf("%s\n", ft_memcpy("abcd", "abcd",4));
-    // printf("%s\n", ft_memmove("abcd", "abcd",4));
-// **************************************************
 
 
     return 0;
