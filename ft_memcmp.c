@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:14:24 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/27 17:36:24 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/27 22:24:09 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str2 = (unsigned char *)s2;
 	comparisin = 0;
 	i = 0;
-	if (s1 == s2)
-		return (comparisin);
+	if (ft_strlen(s1) == 0 || ft_strlen(s2) == 0)
+		return (0);
+	// if (s1 == s2)
+		// return (comparisin);
 	while (n > 0)
 	{
 		if (str1[i] != str2[i])
