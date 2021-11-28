@@ -721,10 +721,8 @@ int main()
     printf("\n##############################################################\n\n");
 
 
-	int *ttest;
-    ttest  = ft_calloc(5,sizeof(int));
 
-	printf("%d\n",ttest[5]);
+
 
     return 0;
 }

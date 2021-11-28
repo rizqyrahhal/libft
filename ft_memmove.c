@@ -44,3 +44,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dest);
 }
+
+/*
+	printf("\n  La différence entre MEMMOVE() et MEMCPY() :\n");
+    printf("\nTEST MEMMOVE()\n");
+    printf("str785245[] = 'abcdefghljk'\n");
+    char str785245[] = "abcdefghljk";
+    printf("%s\n", ft_memmove(&str785245[2],&str785245[0],9));
+    printf("\nTEST MEMCPY()\n");
+    printf("str7852435[] = 'abcdefghljk'\n");
+    char str7852435[] = "abcdefghljk";
+    printf("%s\n", ft_memcpy(&str7852435[2],&str7852435[0],9));
+*/

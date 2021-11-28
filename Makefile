@@ -12,7 +12,7 @@
 
 NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
-CC = gcc
+CC = cc
 
 SRCS = ft_isalpha.c \
 	   ft_isdigit.c \

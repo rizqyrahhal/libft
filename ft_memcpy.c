@@ -25,8 +25,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t		i;
 
 	i = 0;
-	dest = dst;
-	srce = src;
+	dest = (char *)dst;
+	srce = (const char *)src;
 	if (dest == srce)
 		return (dest);
 	if (srce != '\0')
@@ -39,3 +39,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+	printf("\n  La différence entre MEMMOVE() et MEMCPY() :\n");
+    printf("\nTEST MEMMOVE()\n");
+    printf("str785245[] = 'abcdefghljk'\n");
+    char str785245[] = "abcdefghljk";
+    printf("%s\n", ft_memmove(&str785245[2],&str785245[0],9));
+    printf("\nTEST MEMCPY()\n");
+    printf("str7852435[] = 'abcdefghljk'\n");
+    char str7852435[] = "abcdefghljk";
+    printf("%s\n", ft_memcpy(&str7852435[2],&str7852435[0],9));
+*/
