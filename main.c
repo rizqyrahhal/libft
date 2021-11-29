@@ -518,29 +518,29 @@ int main()
 
 
     printf("**+-------- TEST FT_SUBSTR FUNCTION --------+**\n");
-    printf("\nTEST 1 = sourc : 'substrsubstr' index : 3  len : 6\n");
+    printf("\nTEST 1 = sourc : 'substrsubstr' start : 3  len : 6\n");
     char    sourc[] = "substrsubstr";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc, 3, 6));
-    printf("\nTEST 2 = sourc1 : 'sub str sub str' index : 0 len : 10\n");
+    printf("\nTEST 2 = sourc1 : 'sub str sub str' start : 0 len : 10\n");
     char    sourc1[] = "sub str sub str";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc1, 0, 10));
-    printf("\nTEST 3 = sourc2 : 'sub str sub str' index : 17 len : 10\n");
+    printf("\nTEST 3 = sourc2 : 'sub str sub str' start : 17 len : 10\n");
     char    sourc2[] = "sub str sub str";
     printf("return value of ft_substr function === %s\n", ft_substr(sourc2, 17, 10));
-    printf("\nTEST 4 = source : 'tripouille' index : 1 len : 1\n");
+    printf("\nTEST 4 = source : 'tripouille' start : 1 len : 1\n");
     printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
-    printf("\nTEST 5 = source : '1 index : 42 len : 42000000\n");
+    printf("\nTEST 5 = source : '1 start : 42 len : 42000000\n");
     char * str = strdup("1");
     printf("return value of ft_substr function === %s\n", ft_substr(str, 42, 42000000));
-    printf("\nTEST 6 = source : '0123456789' index : 9 len : 10\n");
+    printf("\nTEST 6 = source : '0123456789' start : 9 len : 10\n");
     printf("return value of ft_substr function === %s\n", ft_substr("0123456789", 9, 10));
-    printf("\nTEST 7 = source : 'tripouille' index : 1 len : 1\n");
+    printf("\nTEST 7 = source : 'tripouille' start : 1 len : 1\n");
     printf("return value of ft_substr function === %s\n", ft_substr("tripouille", 1, 1));
-    printf("\nTEST 8 = source : '42' index : 0 len : 0\n");
+    printf("\nTEST 8 = source : '42' start : 0 len : 0\n");
     printf("return value of ft_substr function === %s\n", ft_substr("42", 0, 0));
-    printf("\nTEST 9 = source : 'BONJOUR LES HARICOTS !' index : 8 len : 14\n");
+    printf("\nTEST 9 = source : 'BONJOUR LES HARICOTS !' start : 8 len : 14\n");
     printf("return value of ft_substr function === %s\n", ft_substr("BONJOUR LES HARICOTS !", 8, 14));
-    printf("\nTEST 10 = source : 'test' index : 1 len : 2\n");
+    printf("\nTEST 10 = source : 'test' start : 1 len : 2\n");
     printf("return value of ft_substr function === %s\n", ft_substr("test", 1, 2));
 
     printf("\n|*|---------------------------|*|\n\n");
