@@ -450,6 +450,12 @@ int main()
     printf("\nTEST 10 = haystack:(yarbi dir chi tawil dlkhir ya rabi) needle:(dir) len: 2\n");
     printf("return valus of ft_strnstr function === %s\n", ft_strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
     printf("return valus of strnstr function === %s\n", strnstr("yarbi dir chi tawil dlkhir ya rabi", "dir", 2));
+    printf("\nTEST 11 = haystack:(pen pineapple apple pen!) needle:(pine) len: 10\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("pen pineapple apple pen!", "pine", 10));
+    printf("return valus of strnstr function === %s\n", strnstr("pen pineapple apple pen!", "pine", 10));
+    printf("\nTEST 12 = haystack:(pen pineapple apple pen!) needle:(pine) len: 5\n");
+    printf("return valus of ft_strnstr function === %s\n", ft_strnstr("pen pineapple apple pen!", "pine", 5));
+    printf("return valus of strnstr function === %s\n", strnstr("pen pineapple apple pen!", "pine", 5));
     // printf("\nTEST 8 = haystack:(NULL) needle:(NULL) len: 5\n");
     // printf("return valus of ft_strnstr function === %s\n", ft_strnstr(NULL, NULL, 5));
     // printf("return valus of strnstr function === %s\n", strnstr(NULL, NULL, 5));
@@ -719,6 +725,9 @@ int main()
     printf("return valus of ft_memcmp function === %d\n", ft_memcmp(aa, bb, 10));
     printf("return valus of memcmp function === %d\n", memcmp(aa, bb, 10));
     printf("\n##############################################################\n\n");
+
+
+
 
 
 

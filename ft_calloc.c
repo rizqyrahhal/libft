@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:21:28 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/27 23:18:17 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:06:48 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	p = malloc(count * size);
 	if (!p)
 		return (NULL);
-	ft_bzero(p, count * sizeof(void *));
+	ft_bzero(p, count * size);
 	return (p);
 }
 
@@ -27,9 +27,9 @@ void	*ft_calloc(size_t count, size_t size)
 int	main()
 {
 	int *ttest;
-    ttest  = ft_calloc(5,sizeof(int));
+    ttest  = calloc(5, sizeof(int));
 
-	printf("%d\n",ttest[5]);
+	printf("%d\n",ttest[3]);
 	return 0;
 }
 ** "ista3malt sizeof(void *) likay tata3amala ft_bzero
