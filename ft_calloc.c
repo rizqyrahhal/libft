@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:21:28 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/30 23:40:24 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/01 00:01:11 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,4 @@ int	main()
 	printf("%d\n",ttest[3]);
 	return 0;
 }
-*/
-/*
-** "ista3malt sizeof(void *) likay tata3amala ft_bzero
-**  ma3a ay tybe li2ana void* ta7taj 8 byt wahiya akbar min 
-**   tout les type que trouve "
 */
