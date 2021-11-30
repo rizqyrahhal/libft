@@ -6,140 +6,76 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 12:04:58 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/11/30 15:37:16 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:34:03 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			**ft_malloc_error(char **tab)
+char	**ft_malloc_error(char **tab)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while (tab[i])
-	{
+	i = -1;
+	while (tab[++i])
 		free(tab[i]);
-		i++;
-	}
 	free(tab);
 	return (NULL);
 }
 
-static unsigned int	ft_get_nb_strs(char const *s, char c)
+int	num_of_words(const char *str, char c)
 {
-	unsigned int	i;
-	unsigned int	nb_strs;
+	int	i;
+	int	j;
 
-	if (!s[0])
-		return (0);
 	i = 0;
-	nb_strs = 0;
-	while (s[i] && s[i] == c)
-		i++;
-	while (s[i])
+	j = 0;
+	while (str[i])
 	{
-		if (s[i] == c)
-		{
-			nb_strs++;
-			while (s[i] && s[i] == c)
-				i++;
-			continue ;
-		}
+		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
+			j++;
 		i++;
 	}
-	if (s[i - 1] != c)
-		nb_strs++;
-	return (nb_strs);
+	return (j);
 }
 
-static void			ft_get_next_str(char **next_str, unsigned int *next_str_len,
-					char c)
+char	*next_str(char const *s, char c)
 {
-	unsigned int i;
+	int		i;
+	char	*tab;
 
-	*next_str += *next_str_len;
-	*next_str_len = 0;
 	i = 0;
-	while (**next_str && **next_str == c)
-		(*next_str)++;
-	while ((*next_str)[i])
-	{
-		if ((*next_str)[i] == c)
-			return ;
-		(*next_str_len)++;
+	while (s[i] && s[i] != c)
 		i++;
-	}
-}
-
-char				**ft_split(char const *s, char c)
-{
-	char			**tab;
-	char			*next_str;
-	unsigned int	next_str_len;
-	unsigned int	nb_strs;
-	unsigned int	i;
-
-	if (!s)
+	tab = (char *)malloc(sizeof(char) * (i + 1));
+	if (!tab)
 		return (NULL);
-	nb_strs = ft_get_nb_strs(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (nb_strs + 1))))
-		return (NULL);
-	i = 0;
-	next_str = (char *)s;
-	next_str_len = 0;
-	while (i < nb_strs)
-	{
-		ft_get_next_str(&next_str, &next_str_len, c);
-		if (!(tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1))))
-			return (ft_malloc_error(tab));
-		ft_strlcpy(tab[i], next_str, next_str_len + 1);
-		i++;
-	}
-	tab[i] = NULL;
+	ft_strlcpy(tab, s, i + 1);
 	return (tab);
 }
 
-// int	num_of_words(char *str, char c)
-// {
-// 	int	i;
-// 	int	j;
+char	**ft_split(char const *s, char c)
+{
+	int		i;
+	int		strs_len;
+	char	**tab;
 
-// 	i = 0;
-// 	j = 0;
-// 	while (str[i])
-// 	{
-// 		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
-// 			j++;
-// 		i++;
-// 	}
-// 	return (j);
-// }
-
-// char	**ft_split(char const *s, char c)
-// {
-// 	char	**arr;
-// 	int		start;
-// 	int		end;
-// 	int		i;
-
-// 	arr = (char **)malloc((num_of_words((char *)s, c) + 1) * sizeof(char *));
-// 	if (!s || !c || !arr)
-// 		return (NULL);
-// 	start = 0;
-// 	end = 0;
-// 	i = 0;
-// 	while (i < num_of_words((char *)s, c))
-// 	{
-// 		while (s[start] == c)
-// 			start++;
-// 		end = start;
-// 		while (s[end] != c && s[end])
-// 			end++;
-// 		arr[i] = ft_substr(s, start, (end - start));
-// 		start = end;
-// 		i++;
-// 	}
-// 	arr[i] = 0;
-// 	return (arr);
-// }
+	if (!s)
+		return (NULL);
+	strs_len = num_of_words(s, c);
+	tab = (char **)malloc(sizeof(char *) * (strs_len + 1));
+	if (!tab)
+		return (NULL);
+	i = -1;
+	while (++i < strs_len)
+	{
+		while (s[0] == c)
+			s++;
+		tab[i] = next_str(s, c);
+		if (!tab[i])
+			return (ft_malloc_error(tab));
+		s = s + ft_strlen(tab[i]);
+	}
+	tab[i] = 0;
+	return (tab);
+}
