@@ -6,7 +6,7 @@
 #    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 00:33:04 by rarahhal          #+#    #+#              #
-#    Updated: 2021/11/29 11:23:56 by rarahhal         ###   ########.fr        #
+#    Updated: 2021/12/01 16:51:27 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,3 +79,5 @@ test: $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	gcc $(NAME) main.c -o test
 	rm -rf $(OBJS)
+
+.PHONY: all clean fclean re test
